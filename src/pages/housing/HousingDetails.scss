@@ -1,0 +1,63 @@
+@import "../../assets/variables.scss";
+
+.housing-details-container {
+	padding: $side-padding-small;
+	gap: 1rem;
+
+	p,
+	.host-name {
+		color: $brand-color;
+	}
+
+	p,
+	.housing-tags {
+		align-self: start;
+	}
+
+	.housing-title {
+		font-size: 1.125rem;
+	}
+
+	.housing-location {
+		font-size: 0.875rem;
+	}
+
+	.housing-tags {
+		gap: 0.625rem;
+		flex-wrap: wrap;
+		.tag {
+			color: #fff;
+			background-color: $brand-color;
+			font-size: 0.625rem;
+			border-radius: 0.31rem;
+			padding: 0.3rem 1.7rem;
+		}
+	}
+
+	.housing-infos {
+		width: 100%;
+
+		.housing-rating {
+			.fa-star {
+				color: $light-color-d2;
+
+				&.rated {
+					color: $brand-color;
+				}
+			}
+		}
+		.housing-host {
+			gap: 0.625rem;
+
+			.host-name {
+				max-width: 100px;
+				text-align: end;
+			}
+			.host-picture {
+				border-radius: 50%;
+				overflow: hidden;
+				width: 32px;
+			}
+		}
+	}
+}

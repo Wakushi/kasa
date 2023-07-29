@@ -1,4 +1,4 @@
-export const housingData = [
+export const allHousings = [
 	{
 		id: "c67ab8a7",
 		title: "Appartement cosy",
