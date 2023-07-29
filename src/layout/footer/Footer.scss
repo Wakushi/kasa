@@ -1,0 +1,13 @@
+@import "../../assets/variables.scss";
+
+footer {
+	background-color: #000;
+	padding: 3.75rem 7.5rem;
+
+	p {
+		color: #fff;
+		text-align: center;
+		font-size: $font-size-small;
+		padding: 1rem;
+	}
+}

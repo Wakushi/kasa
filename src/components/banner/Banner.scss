@@ -1,0 +1,19 @@
+@import "../../assets/variables.scss";
+
+.banner-container {
+	background: url("../../assets/banner/banner1.webp") no-repeat center;
+	background-size: cover;
+	border-radius: $border-radius-small;
+
+	.banner-content {
+		background-color: #0000004b;
+		border-radius: $border-radius-small;
+
+		p {
+			font-size: $font-size-big;
+			max-width: 250px;
+			color: #fff;
+			padding: 2rem 1rem;
+		}
+	}
+}
