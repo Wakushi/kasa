@@ -19,7 +19,7 @@ export default function HousingList() {
 
 	return (
 		<>
-			<div className="housing-list flex--column">
+			<div className="housing-list flex--center">
 				{housingData.map((housing) => {
 					return (
 						<Link to="/housing" state={housing} key={housing.id}>

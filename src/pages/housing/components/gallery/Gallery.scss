@@ -6,17 +6,23 @@
 	overflow: hidden;
 	height: 255px;
 	color: #fff;
-	width: 100%;
+	align-self: stretch;
 	animation: fade-in-top 1s ease-in-out;
 
+	@media (width > 768px) {
+		height: 415px;
+	}
 
 	i {
 		position: absolute;
-
 		font-size: 1.5rem;
 		top: 50%;
 		transform: translateY(-50%);
 		opacity: 0.6;
+
+		@media (width > 768px) {
+			font-size: 3.5rem;
+		}
 
 		&.fa-angle-left {
 			left: 10px;
@@ -33,8 +39,14 @@
 
 	.carousel-counter {
 		position: absolute;
-		bottom: 10px;
+		bottom: 24px;
 		left: 50%;
 		transform: translate(-50%);
+		display: none;
+		text-shadow: 1px 1px 8px #00000075;
+
+		@media (width > 768px) {
+			display: block;
+		}
 	}
 }

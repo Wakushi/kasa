@@ -2,4 +2,10 @@
 
 .home {
 	padding: $side-padding-small;
+	max-width: $max-width;
+	margin: 0 auto;
+
+	@media (width > 768px) {
+		padding: $side-padding-medium;
+	}
 }

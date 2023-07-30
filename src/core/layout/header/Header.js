@@ -4,10 +4,18 @@ import "./Header.scss"
 import { NavLink } from "react-router-dom"
 
 export default function Header() {
+	window.addEventListener("resize", () => {
+		document.querySelector(".logo-container img").src =
+			window.innerWidth > 768 ? logo : smallLogo
+	})
+
 	return (
 		<header className="flex--between">
 			<div className="logo-container">
-				<img src={smallLogo} alt="Logo Kasa" />
+				<img
+					src={window.innerWidth > 768 ? logo : smallLogo}
+					alt="Logo Kasa"
+				/>
 			</div>
 			<nav className="flex">
 				<NavLink

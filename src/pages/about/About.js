@@ -10,7 +10,13 @@ export default function About() {
 			<Banner image={banner} minHeight="220px" />
 			<div className="dropdown-list flex--column">
 				{kasaServices.map(({ description, title }) => {
-					return <Dropdown details={description} title={title} />
+					return (
+						<Dropdown
+							key={title}
+							details={description}
+							title={title}
+						/>
+					)
 				})}
 			</div>
 		</section>

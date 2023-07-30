@@ -1,3 +1,13 @@
+@import "../../../../assets/variables.scss";
+
 .housing-list {
 	gap: 1.25rem;
+	flex-wrap: wrap;
+
+	@media (width > 768px) {
+		gap: 3.75rem;
+		background-color: $light-color-d1;
+		padding: 3.125rem;
+		border-radius: $border-radius-medium;
+	}
 }

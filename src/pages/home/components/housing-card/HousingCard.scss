@@ -5,15 +5,20 @@
 	background-color: $brand-color;
 	border-radius: $border-radius-small;
 	overflow: hidden;
-	width: 100%;
-	height: 100%;
 	animation: fade-in-bottom 1s ease-in-out;
+	max-width: 340px;
+	flex: 1 340px;
+
+	img {
+		min-height: 255px;
+	}
 
 	.housing-card-content {
 		position: absolute;
 		top: 0;
 		width: 100%;
 		height: 100%;
+
 		border-radius: $border-radius-small;
 		background: linear-gradient(
 			180deg,

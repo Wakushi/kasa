@@ -3,6 +3,13 @@
 header {
 	padding: 1.25rem;
 	margin-bottom: 0.5rem;
+	width: 100%;
+	max-width: $max-width;
+	margin: 0 auto;
+
+	@media (width > 768px) {
+		padding: 3rem 2.25rem;
+	}
 
 	nav {
 		gap: 1.625rem;
@@ -10,6 +17,11 @@ header {
 			font-size: $font-size-small;
 			color: $brand-color;
 			text-transform: uppercase;
+
+			@media (width > 768px) {
+				font-size: $font-size-medium;
+				text-transform: none;
+			}
 		}
 		.nav-link-active {
 			text-decoration: underline;

@@ -3,35 +3,66 @@
 .housing-details-container {
 	padding: $side-padding-small;
 	gap: 1rem;
+	max-width: $max-width;
+	margin: 0 auto;
 
-	p,
-	.host-name {
-		color: $brand-color;
+	@media (width > 768px) {
+		gap: 1.875rem;
+		padding: $side-padding-medium;
 	}
 
-	p,
-	.housing-tags {
-		align-self: start;
-	}
+	.housing-details {
+		gap: 1rem;
+		align-self: stretch;
 
-	.housing-title {
-		font-size: 1.125rem;
-		animation: fade-in-top 1s ease-in-out;
-	}
+		@media (width > 768px) {
+			flex-direction: row;
+			justify-content: space-between;
+		}
 
-	.housing-location {
-		font-size: 0.875rem;
-	}
+		.housing-details-top {
+			gap: 1rem;
+			align-self: flex-start;
 
-	.housing-tags {
-		gap: 0.625rem;
-		flex-wrap: wrap;
-		.tag {
-			color: #fff;
-			background-color: $brand-color;
-			font-size: 0.625rem;
-			border-radius: 0.31rem;
-			padding: 0.3rem 1.7rem;
+			p {
+				color: $brand-color;
+			}
+
+			p,
+			.housing-tags {
+				align-self: start;
+			}
+
+			.housing-title {
+				font-size: $font-size-smedium;
+				animation: fade-in-top 1s ease-in-out;
+
+				@media (width>768px) {
+					font-size: 2.25rem;
+				}
+			}
+
+			.housing-location {
+				font-size: $font-size-xsmall;
+				@media (width>768px) {
+					font-size: $font-size-smedium;
+				}
+			}
+
+			.housing-tags {
+				gap: 0.625rem;
+				flex-wrap: wrap;
+				.tag {
+					color: #fff;
+					background-color: $brand-color;
+					font-size: $font-size-xxsmall;
+					border-radius: 0.31rem;
+					padding: 0.3rem 1.7rem;
+					@media (width>768px) {
+						font-size: $font-size-xsmall;
+					}
+				}
+			}
 		}
 	}
 
@@ -42,11 +73,25 @@
 	}
 
 	.housing-infos {
-		width: 100%;
+		align-self: stretch;
+
+		@media (width > 768px) {
+			flex-direction: column-reverse;
+			gap: 1rem;
+			align-self: start;
+			width: initial;
+		}
 
 		.housing-rating {
+			@media (width > 768px) {
+				gap: 0.5rem;
+			}
 			.fa-star {
 				color: $light-color-d2;
+
+				@media (width > 768px) {
+					font-size: 1.3rem;
+				}
 
 				&.rated {
 					color: $brand-color;
@@ -61,12 +106,27 @@
 			.host-name {
 				max-width: 100px;
 				text-align: end;
+				color: $brand-color;
+
+				@media (width > 768px) {
+					font-size: $font-size-smedium;
+				}
 			}
 			.host-picture {
 				border-radius: 50%;
 				overflow: hidden;
 				width: 32px;
 			}
+		}
+	}
+
+	.dropdown-list {
+		gap: 1.25rem;
+		align-items: baseline;
+		@media (width > 768px) {
+			align-self: stretch;
+			flex-direction: row;
+			justify-content: space-between;
 		}
 	}
 }

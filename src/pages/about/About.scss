@@ -2,22 +2,16 @@
 
 .about {
 	padding: $side-padding-small;
+	max-width: $max-width;
+	margin: 0 auto;
 
-	.banner-container {
-		position: relative;
-		border-radius: $border-radius-small;
-		overflow: hidden;
-
-		.dark-filter {
-			position: absolute;
-			top: 0;
-			background-color: rgba(0, 0, 0, 0.301);
-			width: 100%;
-			height: 100%;
-		}
+	@media (width > 768px) {
+		padding: $side-padding-medium;
 	}
 
 	.dropdown-list {
 		gap: 1.25rem;
+		max-width: 1024px;
+		margin: 0 auto;
 	}
 }

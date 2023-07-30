@@ -13,13 +13,22 @@
 	h1 {
 		font-size: 6rem;
 		font-weight: 700;
+
+		@media (width > 768px) {
+			font-size: 18rem;
+		}
 	}
 
 	p {
 		max-width: 260px;
+		@media (width > 768px) {
+			font-size: 2.25rem;
+			max-width: 1000px;
+		}
 	}
 
 	.nav-link {
 		text-decoration: underline;
+		font-size: $font-size-smedium;
 	}
 }

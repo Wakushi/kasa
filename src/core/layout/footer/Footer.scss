@@ -5,10 +5,18 @@ footer {
 	padding: 3.75rem 7.5rem;
 	margin-top: 1.7rem;
 
+	@media (width > 768px) {
+		margin-top: 3.125rem;
+	}
+
 	p {
 		color: #fff;
 		text-align: center;
 		font-size: $font-size-small;
 		padding: 1rem;
+
+		@media (width > 768px) {
+			font-size: $font-size-medium;
+		}
 	}
 }
