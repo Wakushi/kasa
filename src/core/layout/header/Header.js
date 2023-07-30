@@ -1,5 +1,5 @@
-import logo from "../../assets/logo/LOGO.webp"
-import smallLogo from "../../assets/logo/LOGO-small.webp"
+import logo from "../../../assets/logo/LOGO.webp"
+import smallLogo from "../../../assets/logo/LOGO-small.webp"
 import "./Header.scss"
 import { NavLink } from "react-router-dom"
 

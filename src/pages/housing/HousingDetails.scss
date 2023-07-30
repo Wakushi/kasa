@@ -16,6 +16,7 @@
 
 	.housing-title {
 		font-size: 1.125rem;
+		animation: fade-in-top 1s ease-in-out;
 	}
 
 	.housing-location {
@@ -34,6 +35,12 @@
 		}
 	}
 
+	.housing-location,
+	.housing-tags,
+	.housing-rating {
+		animation: fade-in-bottom 1.2s ease-in-out;
+	}
+
 	.housing-infos {
 		width: 100%;
 
@@ -48,6 +55,8 @@
 		}
 		.housing-host {
 			gap: 0.625rem;
+			opacity: 0;
+			animation: fade-in-right 1s 400ms ease-in-out forwards;
 
 			.host-name {
 				max-width: 100px;

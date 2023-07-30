@@ -1,0 +1,35 @@
+@import "../../../assets/variables.scss";
+
+.collapse {
+	width: 100%;
+	background-color: $light-color-d1;
+
+	.collapse-head {
+		background-color: $brand-color;
+		border-radius: 0.3rem;
+		padding: 0.625rem;
+		color: #fff;
+
+		.fa-chevron-up {
+			transition: 300ms;
+		}
+	}
+
+	.collapse-content {
+		font-size: 0.8rem;
+		line-height: 1.4;
+		color: $brand-color;
+		overflow: hidden;
+		transition: height 400ms;
+		height: 0;
+
+		ul,
+		p {
+			padding: 1rem 0.625rem;
+		}
+
+		li {
+			margin-bottom: 0.2rem;
+		}
+	}
+}

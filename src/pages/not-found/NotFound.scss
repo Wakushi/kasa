@@ -1,0 +1,25 @@
+@import "../../assets/variables.scss";
+
+.not-found {
+	gap: 7rem;
+	padding: 6rem 0;
+	h1,
+	p,
+	.nav-link {
+		color: $brand-color;
+		text-align: center;
+	}
+
+	h1 {
+		font-size: 6rem;
+		font-weight: 700;
+	}
+
+	p {
+		max-width: 260px;
+	}
+
+	.nav-link {
+		text-decoration: underline;
+	}
+}

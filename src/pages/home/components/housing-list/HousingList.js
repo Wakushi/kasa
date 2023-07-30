@@ -1,6 +1,6 @@
 import { useEffect } from "react"
 import { useState } from "react"
-import { allHousings } from "./housing.service"
+import { allHousings } from "../../../../core/services/housing.service"
 import HousingCard from "../housing-card/HousingCard"
 
 import "./HousingList.scss"

@@ -1,4 +1,4 @@
-import whiteLogo from "../../assets/logo/LOGO-white.webp"
+import whiteLogo from "../../../assets/logo/LOGO-white.webp"
 import "./Footer.scss"
 
 export default function Footer() {

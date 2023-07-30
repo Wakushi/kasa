@@ -1,15 +1,15 @@
 import { useLocation } from "react-router-dom"
+import { useEffect } from "react"
 import "./HousingDetails.scss"
-import { useEffect, useState } from "react"
 import Gallery from "./components/gallery/Gallery"
+import Dropdown from "../../shared/components/dropdown/Dropdown"
+import { getHousingRatingStars } from "../../shared/utils"
 
 export default function HousingDetails() {
 	const { state } = useLocation()
 
 	const {
-		id,
 		title,
-		cover,
 		pictures,
 		description,
 		host,
@@ -22,19 +22,6 @@ export default function HousingDetails() {
 	useEffect(() => {
 		window.scrollTo(0, 0)
 	}, [])
-
-	function getHousingRatingStars() {
-		let stars = []
-		for (let i = 0; i < rating; i++) {
-			stars.push(<i className="fa-solid fa-star rated"></i>)
-		}
-		if (rating < 5) {
-			for (let i = 0; i < 5 - rating; i++) {
-				stars.push(<i className="fa-solid fa-star"></i>)
-			}
-		}
-		return stars
-	}
 
 	return (
 		<>
@@ -54,7 +41,7 @@ export default function HousingDetails() {
 				</div>
 				<div className="housing-infos flex--between">
 					<div className="housing-rating flex">
-						{getHousingRatingStars()}
+						{getHousingRatingStars(rating)}
 					</div>
 					<div className="housing-host flex">
 						<div className="host-name"> {host.name} </div>
@@ -66,6 +53,12 @@ export default function HousingDetails() {
 						</div>
 					</div>
 				</div>
+				<Dropdown details={description} title="Description" />
+				<Dropdown
+					details={equipments}
+					title="Équipements"
+					type="list"
+				/>
 			</div>
 		</>
 	)

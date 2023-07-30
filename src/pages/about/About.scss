@@ -1,0 +1,23 @@
+@import "../../assets/variables.scss";
+
+.about {
+	padding: $side-padding-small;
+
+	.banner-container {
+		position: relative;
+		border-radius: $border-radius-small;
+		overflow: hidden;
+
+		.dark-filter {
+			position: absolute;
+			top: 0;
+			background-color: rgba(0, 0, 0, 0.301);
+			width: 100%;
+			height: 100%;
+		}
+	}
+
+	.dropdown-list {
+		gap: 1.25rem;
+	}
+}
