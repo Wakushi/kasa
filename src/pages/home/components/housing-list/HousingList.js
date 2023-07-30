@@ -10,6 +10,7 @@ export default function HousingList() {
 	const [housingData, setHousingData] = useState([])
 
 	function getHousingData() {
+		// TO-DO : get data from API
 		setHousingData(allHousings)
 	}
 
