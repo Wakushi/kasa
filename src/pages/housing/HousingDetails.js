@@ -1,5 +1,6 @@
 import "./HousingDetails.scss"
 import { useEffect } from "react"
+import { useParams } from "react-router-dom"
 import { allHousings } from "../../core/services/housing.service"
 import { getHousingRatingStars } from "../../shared/utils"
 import Gallery from "./components/gallery/Gallery"
@@ -7,6 +8,7 @@ import Dropdown from "../../shared/components/dropdown/Dropdown"
 import NotFound from "../not-found/NotFound"
 
 export default function HousingDetails() {
+	const { houseId } = useParams()
 	const {
 		title,
 		pictures,
@@ -19,10 +21,7 @@ export default function HousingDetails() {
 	} = getHousingById() || {}
 
 	function getHousingById() {
-		const housing = allHousings.find(
-			(housing) => housing.id === window.location.pathname.split("/")[2]
-		)
-		return housing
+		return allHousings.find((housing) => housing.id === houseId)
 	}
 
 	useEffect(() => {
