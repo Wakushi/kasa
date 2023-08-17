@@ -4,11 +4,6 @@ import "./Header.scss"
 import { NavLink } from "react-router-dom"
 
 export default function Header() {
-	window.addEventListener("resize", () => {
-		document.querySelector(".logo-container img").src =
-			window.innerWidth > 768 ? logo : smallLogo
-	})
-
 	return (
 		<header className="flex--between">
 			<div className="logo-container">
@@ -18,26 +13,10 @@ export default function Header() {
 				/>
 			</div>
 			<nav className="flex">
-				<NavLink
-					className="nav-link"
-					to="/"
-					style={({ isActive }) => {
-						return {
-							textDecoration: isActive ? "underline" : ""
-						}
-					}}
-				>
+				<NavLink className="nav-link" to="/">
 					Accueil
 				</NavLink>
-				<NavLink
-					className="nav-link"
-					to="/about"
-					style={({ isActive }) => {
-						return {
-							textDecoration: isActive ? "underline" : ""
-						}
-					}}
-				>
+				<NavLink className="nav-link" to="/about">
 					À Propos
 				</NavLink>
 			</nav>
