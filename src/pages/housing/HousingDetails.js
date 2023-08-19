@@ -16,6 +16,10 @@ export default function HousingDetails() {
 
 	const housing = getHousingById()
 
+	useEffect(() => {
+		window.scrollTo(0, 0)
+	}, [])
+
 	if (!housing) {
 		return <NotFound />
 	}
@@ -30,10 +34,6 @@ export default function HousingDetails() {
 		equipments,
 		tags
 	} = housing
-
-	useEffect(() => {
-		window.scrollTo(0, 0)
-	}, [])
 
 	return (
 		<section className="housing-details-container flex--column">
